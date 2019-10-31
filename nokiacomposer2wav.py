@@ -1,7 +1,7 @@
 import logging
 import re
 
-import pysynth_beeper
+import pysynthesizer_beeper
 
 LOG = logging.getLogger("nokiacomposer2wav")
 
@@ -38,7 +38,7 @@ if __name__ == "__main__":
         tune = parse_ringtone(tune_str)
         filename = os.path.join("out", filename)
         LOG.info("Generating %s" % filename)
-        pysynth_beeper.make_wav(tune, fn=filename, tempo=tempo, transpose=3)
+        pysynthesizer_beeper.make_wav(tune, fn=filename, tempo=tempo, transpose=3)
 
 
 

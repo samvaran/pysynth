@@ -26,21 +26,21 @@ except: num = 1
 song = []
 
 if "--syn_b" in sys.argv:
-	import pysynth_b as pysynth
+	import pysynthesizer_b as pysynthesizer
 elif "--syn_s" in sys.argv:
-	import pysynth_s as pysynth
+	import pysynthesizer_s as pysynthesizer
 elif "--syn_e" in sys.argv:
-	import pysynth_e as pysynth
+	import pysynthesizer_e as pysynthesizer
 elif "--syn_c" in sys.argv:
-	import pysynth_c as pysynth
+	import pysynthesizer_c as pysynthesizer
 elif "--syn_d" in sys.argv:
-	import pysynth_d as pysynth
+	import pysynthesizer_d as pysynthesizer
 elif "--syn_p" in sys.argv:
-	import pysynth_p as pysynth
+	import pysynthesizer_p as pysynthesizer
 elif "--syn_samp" in sys.argv:
-	import pysynth_samp as pysynth
+	import pysynthesizer_samp as pysynthesizer
 else:
-	import pysynth
+	import pysynthesizer
 
 
 # flatten or sharpen notes according to key signature
@@ -332,5 +332,5 @@ else:
 	print()
 	print(len(song))
 
-	pysynth.make_wav(song, bpm = bpm)
+	pysynthesizer.make_wav(song, bpm = bpm)
 

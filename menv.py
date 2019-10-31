@@ -6,7 +6,7 @@ Pranav Ravichandran (me@onloop.net)
 """
 
 import play_wav
-import pysynth, pysynth_b, pysynth_s
+import pysynthesizer, pysynthesizer_b, pysynthesizer_s
 import wave
 import sys
 import os
@@ -44,11 +44,11 @@ class mEnv:
 
 		# Different cases of input, when optional argument 'sound' is given.
 		if self.instrument == 'a' or self.instrument == '':
-			self.synthSounds(pysynth, self.outFile)
+			self.synthSounds(pysynthesizer, self.outFile)
 		elif self.instrument == 'b':
-			self.synthSounds(pysynth_b, self.outFile)
+			self.synthSounds(pysynthesizer_b, self.outFile)
 		elif self.instrument == 's':
-			self.synthSounds(pysynth_s, self.outFile)
+			self.synthSounds(pysynthesizer_s, self.outFile)
 		else:
 			print(invalidOption)
 			mEnv()
