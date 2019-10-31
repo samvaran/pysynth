@@ -246,20 +246,20 @@ if __name__ == "__main__":
 	print("Song")
 	print(song)
 	if "--syn_b" in sys.argv:
-		import pysynthesizer_b as pysynthesizer
+		import pysynth_b as pysynth
 	elif "--syn_s" in sys.argv:
-		import pysynthesizer_s as pysynthesizer
+		import pysynth_s as pysynth
 	elif "--syn_e" in sys.argv:
-		import pysynthesizer_e as pysynthesizer
+		import pysynth_e as pysynth
 	elif "--syn_c" in sys.argv:
-		import pysynthesizer_c as pysynthesizer
+		import pysynth_c as pysynth
 	elif "--syn_d" in sys.argv:
-		import pysynthesizer_d as pysynthesizer
+		import pysynth_d as pysynth
 	elif "--syn_p" in sys.argv:
-		import pysynthesizer_p as pysynthesizer
+		import pysynth_p as pysynth
 	elif "--syn_samp" in sys.argv:
-		import pysynthesizer_samp as pysynthesizer
+		import pysynth_samp as pysynth
 	else:
-		import pysynthesizer
-	pysynthesizer.make_wav(song, fn = filename, bpm = m.tempo)
+		import pysynth
+	pysynth.make_wav(song, fn = filename, bpm = m.tempo)
 
